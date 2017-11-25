@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Practica Vue 03 - Boostrap 4 List</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <main>
+  <nav class="nav">
+    <a class="nav-link" @click="DeleteUser()" href="#">Suprimir en pila</a>
+  </nav>
+    <div v-if="users.length" class="alert alert-success">
+    <span>Número de Websites : {{ users.length }}</span> 
+ </div>
+  <div class="alert alert-warning" v-else>
+    <span>¡Registros vacios!</span> 
+ </div>
+  <div class="lista">
+  <ul class="list-group">
+    
+    <li class="list-group-item list-group-item-action" v-for="(user, index) in users" @click="DeleteUserClick(index)" title="Click para eliminar">{{ user.email }}<i class="icon fa fa-trash-o" aria-hidden="true"></i></li>  
+  </ul>
+  </div>
+</main>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js'></script>
+
+    <script  src="js/index.js"></script>
+
+</body>
+</html>

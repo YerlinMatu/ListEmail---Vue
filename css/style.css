@@ -1,0 +1,44 @@
+nav {
+  height: 60px;
+  background-color: #490a3d;
+}
+nav a {
+  color: #fff;
+  line-height: 2.5 !important;
+  text-transform: uppercase;
+}
+nav a:hover {
+  color: black;
+}
+nav a:active {
+  color: white;
+}
+
+.lista {
+  width: 95%;
+  margin: 0 auto;
+}
+.lista li {
+  cursor: pointer;
+}
+
+input {
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+  margin-right: 17%;
+  height: 40px;
+  margin-top: -17px;
+}
+
+i {
+  position: absolute;
+  left: 95%;
+}
+
+li:hover {
+  color: green;
+}
+li:hover i {
+  color: red;
+}
